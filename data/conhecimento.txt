@@ -1,0 +1,9 @@
+IA generativa é uma tecnologia capaz de criar conteúdos como textos, imagens e códigos.
+
+Machine learning é uma subárea da inteligência artificial focada em aprendizado baseado em dados.
+
+RAG significa Retrieval-Augmented Generation, técnica que combina busca de informações com geração de respostas.
+
+LLMs são Large Language Models treinados em grandes volumes de texto.
+
+Ollama é uma ferramenta para executar modelos de linguagem localmente.
