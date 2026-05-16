@@ -7,6 +7,9 @@ from app.services.memoria_service import adicionar_mensagem, limpar_historico
 # Ajuste para o Flask encontrar as pastas de templates e arquivos estáticos
 app = Flask(__name__, template_folder='app/templates', static_folder='app/static')
 
+# Garante que caracteres UTF-8 (acentos) sejam retornados corretamente no JSON
+app.config['JSON_AS_ASCII'] = False
+
 
 @app.route("/")
 def index():

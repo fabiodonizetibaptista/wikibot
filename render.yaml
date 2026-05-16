@@ -2,5 +2,10 @@ services:
   - type: web
     name: wikibot
     env: python
+    plan: free
+    region: oregon
     buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
+    startCommand: gunicorn main:app
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
