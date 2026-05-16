@@ -18,6 +18,19 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/health", methods=["GET"])
+def health():
+    """
+    Rota de health check para manter o serviço ativo no Render (plano free).
+    Deve ser pingada a cada 5 minutos por um serviço externo (ex: UptimeRobot).
+    """
+    return jsonify({
+        "status": "ok",
+        "servico": "wikibot",
+        "mensagem": "Serviço operacional."
+    }), 200
+
+
 @app.route("/webhook", methods=["POST"])
 def webhook():
     """
